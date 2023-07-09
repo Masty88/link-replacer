@@ -1,0 +1,1086 @@
+<html lang="en" dir="ltr" class="toolbar-loading toolbar-anti-flicker toolbar-horizontal toolbar-tray-open toolbar-fixed toolbar-oriented no-touchevents js"><head>
+    <meta charset="utf-8">
+<noscript><meta http-equiv="Refresh" content="0; URL=/big_pipe/no-js?destination=/entity-browser/modal/groups%3Fuuid%3Da635008d4c9a36d7b275b5010ce2616b888546ff%26original_path%3D/node/add/article" />
+</noscript><meta name="Generator" content="Drupal 10 (https://www.drupal.org)">
+<meta name="MobileOptimized" content="width">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" data-toolbar-anti-flicker-loading="">(function() {
+  const toolbarState = sessionStorage.getItem('Drupal.toolbar.toolbarState')
+    ? JSON.parse(sessionStorage.getItem('Drupal.toolbar.toolbarState'))
+    : false;
+  // These are classes that toolbar typically adds to <body>, but this code
+  // executes before the first paint, when <body> is not yet present. The
+  // classes are added to <html> so styling immediately reflects the current
+  // toolbar state. The classes are removed after the toolbar completes
+  // initialization.
+  const classesToAdd = ['toolbar-loading', 'toolbar-anti-flicker'];
+  if (toolbarState) {
+    const {
+      orientation,
+      hasActiveTab,
+      isFixed,
+      activeTray,
+      activeTabId,
+      isOriented,
+      userButtonMinWidth
+    } = toolbarState;
+
+    classesToAdd.push(
+      orientation ? `toolbar-` + orientation + `` : 'toolbar-horizontal',
+    );
+    if (hasActiveTab !== false) {
+      classesToAdd.push('toolbar-tray-open');
+    }
+    if (isFixed) {
+      classesToAdd.push('toolbar-fixed');
+    }
+    if (isOriented) {
+      classesToAdd.push('toolbar-oriented');
+    }
+
+    if (activeTray) {
+      // These styles are added so the active tab/tray styles are present
+      // immediately instead of "flickering" on as the toolbar initializes. In
+      // instances where a tray is lazy loaded, these styles facilitate the
+      // lazy loaded tray appearing gracefully and without reflow.
+      const styleContent = `
+      .toolbar-loading #` + activeTabId + ` {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.25) 20%, transparent 200%);
+      }
+      .toolbar-loading #` + activeTabId + `-tray {
+        display: block; box-shadow: -1px 0 5px 2px rgb(0 0 0 / 33%);
+        border-right: 1px solid #aaa; background-color: #f5f5f5;
+        z-index: 0;
+      }
+      .toolbar-loading.toolbar-vertical.toolbar-tray-open #` + activeTabId + `-tray {
+        width: 15rem; height: 100vh;
+      }
+     .toolbar-loading.toolbar-horizontal :not(#` + activeTray + `) > .toolbar-lining {opacity: 0}`;
+
+      const style = document.createElement('style');
+      style.textContent = styleContent;
+      style.setAttribute('data-toolbar-anti-flicker-loading', true);
+      document.querySelector('head').appendChild(style);
+
+      if (userButtonMinWidth) {
+        const userButtonStyle = document.createElement('style');
+        userButtonStyle.textContent = `#toolbar-item-user {min-width: ` + userButtonMinWidth +`px;}`
+        document.querySelector('head').appendChild(userButtonStyle);
+      }
+    }
+  }
+  document.querySelector('html').classList.add(...classesToAdd);
+})();</script><style data-toolbar-anti-flicker-loading="true">
+      .toolbar-loading #toolbar-item-administration {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.25) 20%, transparent 200%);
+      }
+      .toolbar-loading #toolbar-item-administration-tray {
+        display: block; box-shadow: -1px 0 5px 2px rgb(0 0 0 / 33%);
+        border-right: 1px solid #aaa; background-color: #f5f5f5;
+        z-index: 0;
+      }
+      .toolbar-loading.toolbar-vertical.toolbar-tray-open #toolbar-item-administration-tray {
+        width: 15rem; height: 100vh;
+      }
+     .toolbar-loading.toolbar-horizontal :not(#toolbar-item-administration-tray) > .toolbar-lining {opacity: 0}</style><style>#toolbar-item-user {min-width: 133px;}</style>
+<noscript><link rel="stylesheet" href="/core/themes/claro/css/components/dropbutton-noscript.css?rxflbp" />
+</noscript><link rel="icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon">
+
+    <title>Groups | SIB Swiss Institute of Bioinformatics</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_q888-pHnsobOiChzHqUSDQR046_2I3wtcjaRBfbwlXc.css?delta=0&amp;language=en&amp;theme=sib_admin&amp;include=eJxdT9ESgyAM-yGUT_IKdF4dgmtBZV8_hno799KjSZoEGxm147yA7xeOI6OIsjEk3FMGf1E_pPMUnqIYVgxaMCQuneG4CfIJtqmkSMJZGxBU1gNHbYHdBYObKdScGh4iz-DpfclGH02NkVRq0qiEzNDUJ3EcnbXAJlqxVVK1CqUynF30fVUr4Sa6zX6OLns8jKj-i0O1ml4ZufSP2uYmhgn2f-8vowyNw0IL6uvxAcS_gTY">
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_ozWxdo3GHEgb5DetzNbtEDSivzL5dMFJgu3mz0uhPJA.css?delta=1&amp;language=en&amp;theme=sib_admin&amp;include=eJxdT9ESgyAM-yGUT_IKdF4dgmtBZV8_hno799KjSZoEGxm147yA7xeOI6OIsjEk3FMGf1E_pPMUnqIYVgxaMCQuneG4CfIJtqmkSMJZGxBU1gNHbYHdBYObKdScGh4iz-DpfclGH02NkVRq0qiEzNDUJ3EcnbXAJlqxVVK1CqUynF30fVUr4Sa6zX6OLns8jKj-i0O1ml4ZufSP2uYmhgn2f-8vowyNw0IL6uvxAcS_gTY">
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_hH4qtww3AAsPRzJTLSLu7_wnmAowaLDm1f8IY1Q217c.css?delta=2&amp;language=en&amp;theme=sib_admin&amp;include=eJxdT9ESgyAM-yGUT_IKdF4dgmtBZV8_hno799KjSZoEGxm147yA7xeOI6OIsjEk3FMGf1E_pPMUnqIYVgxaMCQuneG4CfIJtqmkSMJZGxBU1gNHbYHdBYObKdScGh4iz-DpfclGH02NkVRq0qiEzNDUJ3EcnbXAJlqxVVK1CqUynF30fVUr4Sa6zX6OLns8jKj-i0O1ml4ZufSP2uYmhgn2f-8vowyNw0IL6uvxAcS_gTY">
+
+    <script src="/sites/default/files/js/js_XADtgbvglqXMqvPNN86KhVjNWWn7Hsi0uQ3ZVfcdQc0.js?scope=header&amp;delta=0&amp;language=en&amp;theme=sib_admin&amp;include=eJxdT9ESgyAM-yGUT_IKdF4dgmtBZV8_hno799KjSZoEGxm147yA7xeOI6OIsjEk3FMGf1E_pPMUnqIYVgxaMCQuneG4CfIJtqmkSMJZGxBU1gNHbYHdBYObKdScGh4iz-DpfclGH02NkVRq0qiEzNDUJ3EcnbXAJlqxVVK1CqUynF30fVUr4Sa6zX6OLns8jKj-i0O1ml4ZufSP2uYmhgn2f-8vowyNw0IL6uvxAcS_gTY"></script>
+
+</head>
+<body>
+<a href="#main-content" class="visually-hidden focusable">
+    Skip to main content
+</a>
+    <div class="page-wrapper dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+    <div class="layout-container">
+
+        <div data-drupal-messages-fallback="" class="hidden messages-list"></div>
+
+
+    <main role="main">
+        <a id="main-content" tabindex="-1"></a>
+        <div class="layout-content">
+
+              <div class="region region-content">
+    <div id="block-sib-admin-content" class="block block-system block-system-main-block">
+
+
+      <form class="entity-browser-groups-form entity-browser-form" data-entity-browser-uuid="a635008d4c9a36d7b275b5010ce2616b888546ff" data-drupal-selector="entity-browser-groups-form" action="/entity-browser/modal/groups?uuid=a635008d4c9a36d7b275b5010ce2616b888546ff&amp;original_path=/node/add/article" method="post" id="entity-browser-groups-form" accept-charset="UTF-8">
+  <div class="view view-nodes-entity-browser view-id-nodes_entity_browser view-display-id-entity_browser_2 js-view-dom-id-112b94ab579c6519628de89f40b86cb379dad3e67f1a94cfd6c5bdb48f0d5c74" data-once="ajax-pager">
+
+
+        <div class="view-filters">
+      <div class="views-exposed-form" aria-label="Filter the contents of the  view" data-drupal-selector="views-exposed-form-nodes-entity-browser-entity-browser-2" action="/entity-browser/modal/groups" method="get" id="views-exposed-form-nodes-entity-browser-entity-browser-2" accept-charset="UTF-8" data-once="exposed-form submit-by-enter-key">
+  <div class="views-exposed-form__item js-form-item form-item js-form-type-textfield form-type--textfield js-form-item-title form-item--title">
+      <label for="edit-title--U5FEOwKoIks" class="form-item__label">Title</label>
+        <input data-drupal-selector="edit-title" type="text" id="edit-title--U5FEOwKoIks" name="title" value="" size="30" maxlength="128" class="form-text form-element form-element--type-text form-element--api-textfield">
+        </div>
+<div class="views-exposed-form__item views-exposed-form__item--preceding-actions js-form-item form-item js-form-type-textfield form-type--textfield js-form-item-field-group-leader-value form-item--field-group-leader-value">
+      <label for="edit-field-group-leader-value--85lX5iNR0ZM" class="form-item__label">Group leader</label>
+        <input data-drupal-selector="edit-field-group-leader-value" type="text" id="edit-field-group-leader-value--85lX5iNR0ZM" name="field_group_leader_value" value="" size="30" maxlength="128" class="form-text form-element form-element--type-text form-element--api-textfield">
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions views-exposed-form__item views-exposed-form__item--actions js-form-wrapper form-wrapper" id="edit-actions--sM0Fg04C0Yo"><input data-drupal-selector="edit-submit-nodes-entity-browser-tcjwqi3vz9y" type="submit" id="edit-submit-nodes-entity-browser--tCjWqi3vz9Y" value="Apply" class="button js-form-submit form-submit"></div>
+
+
+</div>
+
+    </div>
+
+      <div class="view-content">
+      <table class="views-table views-view-table cols-4">
+        <thead>
+      <tr>
+                                                  <th class="select-all views-field views-field-entity-browser-select" scope="col"></th>
+                                                  <th id="view-title-table-column--vSvPwrBNCug" aria-sort="ascending" class="sortable-heading views-field views-field-title is-active" scope="col"><a href="?uuid=a635008d4c9a36d7b275b5010ce2616b888546ff&amp;original_path=/node/add/article&amp;ajax_page_state%5Btheme%5D=sib_admin&amp;ajax_page_state%5Btheme_token%5D=vDxlNR1aq0U1hmOORV0U-yPbYb5ev7Dc02ps8EpBVs0&amp;ajax_page_state%5Blibraries%5D=big_pipe/big_pipe%2Cclaro/global-styling%2Ccontextual/drupal.contextual-links%2Ccore/drupal.active-link%2Ccore/normalize%2Centity_browser/entity_browser%2Centity_browser/view%2Craven/raven%2Csib_admin/global%2Csystem/admin%2Csystem/base%2Cviews/views.ajax%2Cviews/views.module&amp;title=&amp;field_group_leader_value=&amp;order=title&amp;sort=desc" title="sort by Title" rel="nofollow">Title<span class="tablesort tablesort--desc">
+      <span class="visually-hidden">
+      Sort descending
+          </span>
+  </span>
+</a></th>
+                                                  <th id="view-field-group-leader-table-column--RuByMrFkE6g" class="sortable-heading views-field views-field-field-group-leader" scope="col"><a href="?uuid=a635008d4c9a36d7b275b5010ce2616b888546ff&amp;original_path=/node/add/article&amp;ajax_page_state%5Btheme%5D=sib_admin&amp;ajax_page_state%5Btheme_token%5D=vDxlNR1aq0U1hmOORV0U-yPbYb5ev7Dc02ps8EpBVs0&amp;ajax_page_state%5Blibraries%5D=big_pipe/big_pipe%2Cclaro/global-styling%2Ccontextual/drupal.contextual-links%2Ccore/drupal.active-link%2Ccore/normalize%2Centity_browser/entity_browser%2Centity_browser/view%2Craven/raven%2Csib_admin/global%2Csystem/admin%2Csystem/base%2Cviews/views.ajax%2Cviews/views.module&amp;title=&amp;field_group_leader_value=&amp;order=field_group_leader&amp;sort=asc" title="sort by Group Leader: Name" rel="nofollow">Group Leader: Name</a></th>
+                                                  <th id="view-field-city-table-column--GZZhtwNJvVM" class="sortable-heading views-field views-field-field-city" scope="col"><a href="?uuid=a635008d4c9a36d7b275b5010ce2616b888546ff&amp;original_path=/node/add/article&amp;ajax_page_state%5Btheme%5D=sib_admin&amp;ajax_page_state%5Btheme_token%5D=vDxlNR1aq0U1hmOORV0U-yPbYb5ev7Dc02ps8EpBVs0&amp;ajax_page_state%5Blibraries%5D=big_pipe/big_pipe%2Cclaro/global-styling%2Ccontextual/drupal.contextual-links%2Ccore/drupal.active-link%2Ccore/normalize%2Centity_browser/entity_browser%2Centity_browser/view%2Craven/raven%2Csib_admin/global%2Csystem/admin%2Csystem/base%2Cviews/views.ajax%2Cviews/views.module&amp;title=&amp;field_group_leader_value=&amp;order=field_city&amp;sort=asc" title="sort by City" rel="nofollow">City</a></th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:492]" type="checkbox" value="node:492" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/applied-computational-genomics-team" hreflang="en">Applied Computational Genomics Team</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Maria Anisimova          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/81" hreflang="en">Wädenswil</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:452]" type="checkbox" value="node:452" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/artificial-and-natural-evolutionary-development-complexity" hreflang="en">Artificial and Natural Evolutionary Development of Complexity</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Michel Milinkovitch          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:490]" type="checkbox" value="node:490" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/artificial-intelligence-health" hreflang="en">Artificial Intelligence in Health</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Enkelejda Miho          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/77" hreflang="en">Muttenz</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:493]" type="checkbox" value="node:493" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/bioinformatics-proteogenomics" hreflang="en">Bioinformatics Proteogenomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Christian Ahrens          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/81" hreflang="en">Wädenswil</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:496]" type="checkbox" value="node:496" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/bioinformatics-systems-biology" hreflang="en">Bioinformatics Systems Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Christian von Mering          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:448]" type="checkbox" value="node:448" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/biomathematics-and-computational-biology" hreflang="en">Biomathematics and Computational Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Christian Mazza          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/30" hreflang="en">Fribourg</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:497]" type="checkbox" value="node:497" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/biomedical-informatics" hreflang="en">Biomedical Informatics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Gunnar Ratsch          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:488]" type="checkbox" value="node:488" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/biomext-biomedical-information-extraction" hreflang="en">BioMeXT Biomedical Information Extraction</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Fabio Rinaldi          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/72" hreflang="en">Lugano</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:461]" type="checkbox" value="node:461" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/biomolecular-and-pharmaceutical-modelling" hreflang="en">Biomolecular and Pharmaceutical Modelling</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Francesco Gervasio          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:462]" type="checkbox" value="node:462" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/biostatistics-platform" hreflang="en">Biostatistics platform</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Frederic Schutz          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:449]" type="checkbox" value="node:449" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/bugfri" hreflang="en">BUGFri</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Laurent Falquet          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/30" hreflang="en">Fribourg</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:453]" type="checkbox" value="node:453" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/calipho" hreflang="en">CALIPHO</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Amos Bairoch          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:447]" type="checkbox" value="node:447" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/cancer-systems-immunology" hreflang="en">Cancer Systems Immunology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Santiago Carmona          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/26" hreflang="en">Epalinges</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:443]" type="checkbox" value="node:443" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/cardio-care" hreflang="en">Cardio-CARE</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Andreas Ziegler          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/24" hreflang="en">Davos-Wolfgang</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:495]" type="checkbox" value="node:495" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/cellular-consequences-genetic-variation" hreflang="en">Cellular consequences of genetic variation</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Pedro Beltrao          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:454]" type="checkbox" value="node:454" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/clinical-bioinformatics" hreflang="en">Clinical Bioinformatics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Valerie Barbie          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:512]" type="checkbox" value="node:512" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/clinical-computational-biology" hreflang="en">Clinical Computational Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Abdullah Kahraman          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:465]" type="checkbox" value="node:465" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/comparative-genomics" hreflang="en">Comparative Genomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Christophe Dessimoz          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:439]" type="checkbox" value="node:439" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-and-molecular-population-genetics" hreflang="en">Computational and Molecular Population Genetics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Laurent Excoffier          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/19" hreflang="en">Bern</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:499]" type="checkbox" value="node:499" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-biochemistry-research" hreflang="en">Computational Biochemistry Research</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Gaston Gonnet          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:463]" type="checkbox" value="node:463" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-biology" hreflang="en">Computational Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Sven Bergmann          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:424]" type="checkbox" value="node:424" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-biology-cobi" hreflang="en">Computational Biology CoBi</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Dagmar Iber          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:500]" type="checkbox" value="node:500" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-biology-eth" hreflang="en">Computational Biology ETH</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Joshua Payne          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:425]" type="checkbox" value="node:425" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-biology-group" hreflang="en">Computational Biology Group</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Niko Beerenwinkel          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:445]" type="checkbox" value="node:445" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-cancer-biology" hreflang="en">Computational Cancer Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">David Gfeller          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/26" hreflang="en">Epalinges</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:464]" type="checkbox" value="node:464" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-cancer-genomics" hreflang="en">Computational Cancer Genomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:501]" type="checkbox" value="node:501" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-epigenetics-cancer" hreflang="en">Computational Epigenetics of Cancer</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Valentina Boeva          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:426]" type="checkbox" value="node:426" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-evolution" hreflang="en">Computational Evolution</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Tanja Stadler          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:455]" type="checkbox" value="node:455" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-evolutionary-genomics" hreflang="en">Computational Evolutionary Genomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Evgeny Zdobnov          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:451]" type="checkbox" value="node:451" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-evolutionary-paleobiology" hreflang="en">Computational Evolutionary Paleobiology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Daniele Silvestro          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/30" hreflang="en">Fribourg</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:494]" type="checkbox" value="node:494" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-intelligence-computational-biology" hreflang="en">Computational Intelligence for Computational Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Carlos Pena-Reyes          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/84" hreflang="en">Yverdon-les-Bains</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:427]" type="checkbox" value="node:427" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-structural-biology" hreflang="en">Computational Structural Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Torsten Schwede          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:437]" type="checkbox" value="node:437" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-structural-biology-irb" hreflang="en">Computational Structural Biology IRB</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Andrea Cavalli          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/16" hreflang="en">Bellinzona</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:513]" type="checkbox" value="node:513" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-structural-biology-signaling-proteins" hreflang="en">Computational Structural Biology of Signaling Proteins</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Xavier Deupi          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:428]" type="checkbox" value="node:428" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-systems-biology" hreflang="en">Computational Systems Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Joerg Stelling          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:466]" type="checkbox" value="node:466" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computational-systems-oncology" hreflang="en">Computational Systems Oncology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Giovanni Ciriello          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:446]" type="checkbox" value="node:446" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/computer-aided-molecular-engineering" hreflang="en">Computer-aided Molecular Engineering</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Vincent Zoete          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/26" hreflang="en">Epalinges</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:429]" type="checkbox" value="node:429" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/dbm-bioinformatics-core-facility" hreflang="en">DBM Bioinformatics Core Facility</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Robert Ivanek          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:468]" type="checkbox" value="node:468" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/digital-humanities-plus" hreflang="en">Digital Humanities Plus</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Claire Clivaz          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:470]" type="checkbox" value="node:470" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/evolutionary-bioinformatics" hreflang="en">Evolutionary Bioinformatics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Marc Robinson-Rechavi          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:471]" type="checkbox" value="node:471" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/evolutionary-genomics" hreflang="en">Evolutionary Genomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Anna-Sapfo Malaspinas          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:472]" type="checkbox" value="node:472" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/evolutionary-microbiology" hreflang="en">Evolutionary Microbiology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Sara Mitri          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:502]" type="checkbox" value="node:502" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/evolutionary-systems-biology" hreflang="en">Evolutionary Systems Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Andreas Wagner          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:469]" type="checkbox" value="node:469" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/evolutionary-functional-genomics" hreflang="en">Evolutionary-Functional Genomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Robert Waterhouse          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:473]" type="checkbox" value="node:473" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/evoneuro" hreflang="en">EvoNeuro</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Roman Arguello          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:430]" type="checkbox" value="node:430" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/fmi-computational-biology" hreflang="en">FMI Computational Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Michael Stadler          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:503]" type="checkbox" value="node:503" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/functional-genomics-center-zurich" hreflang="en">Functional Genomics Center Zurich</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Hubert Rehrauer          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:431]" type="checkbox" value="node:431" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/genome-systems-biology" hreflang="en">Genome Systems Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Erik van Nimwegen          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:489]" type="checkbox" value="node:489" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/genomics-and-health-informatics" hreflang="en">Genomics and Health Informatics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">rluisier          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/75" hreflang="en">Martigny</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:474]" type="checkbox" value="node:474" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/host-pathogen-genomics" hreflang="en">Host-Pathogen Genomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Jacques Fellay          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:440]" type="checkbox" value="node:440" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/interfaculty-bioinformatics-unit" hreflang="en">Interfaculty Bioinformatics Unit</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Remy Bruggmann          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/19" hreflang="en">Bern</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:438]" type="checkbox" value="node:438" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/ior-bioinformatics-core-unit" hreflang="en">IOR Bioinformatics Core Unit</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Luciano Cascione          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/16" hreflang="en">Bellinzona</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:467]" type="checkbox" value="node:467" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/it" hreflang="en">IT</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:475]" type="checkbox" value="node:475" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/laboratory-biomolecular-modeling" hreflang="en">Laboratory for Biomolecular Modeling</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Matteo Dal Peraro          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:485]" type="checkbox" value="node:485" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/laboratory-computational-biology-and-theoretical-biophysics" hreflang="en">Laboratory of Computational Biology and Theoretical Biophysics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">AnneFlorence Bitbol          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:476]" type="checkbox" value="node:476" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/laboratory-protein-design-and-immunoengineering" hreflang="en">Laboratory of Protein Design and Immunoengineering</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Bruno Correia          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:477]" type="checkbox" value="node:477" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/laboratory-systems-biology-and-genetics" hreflang="en">Laboratory of Systems Biology and Genetics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Bart Deplancke          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:504]" type="checkbox" value="node:504" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/medical-data-science" hreflang="en">Medical Data Science</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Julia Vogt          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:432]" type="checkbox" value="node:432" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/microbial-evolution" hreflang="en">Microbial Evolution</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Richard Neher          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:505]" type="checkbox" value="node:505" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/microbiome-research" hreflang="en">Microbiome Research</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Shinichi Sunagawa          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:444]" type="checkbox" value="node:444" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/molecular-allergology" hreflang="en">Molecular Allergology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Katja Baerenfaller          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/24" hreflang="en">Davos-Wolfgang</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:478]" type="checkbox" value="node:478" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/molecular-modelling" hreflang="en">Molecular Modelling</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Olivier Michielin          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:491]" type="checkbox" value="node:491" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/multi-omics-healthcare-materials" hreflang="en">Multi-omics for healthcare materials</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Marija Buljan          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/79" hreflang="en">St. Gallen</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:498]" type="checkbox" value="node:498" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/nexus-personalized-health-technologies" hreflang="en">NEXUS Personalized Health Technologies</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Daniel Stekhoven          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:441]" type="checkbox" value="node:441" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/oncogenomics" hreflang="en">Oncogenomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">CharlotteKY Ng          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/19" hreflang="en">Bern</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:456]" type="checkbox" value="node:456" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/osirix" hreflang="en">OsiriX</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Osman Ratib          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:433]" type="checkbox" value="node:433" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/personalized-health-informatics" hreflang="en">Personalized Health Informatics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Katrin Crameri          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:506]" type="checkbox" value="node:506" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/phrt-clinical-proteotype-analysis-center" hreflang="en">PHRT Clinical Proteotype Analysis Center</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Patrick Pedrioli          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:479]" type="checkbox" value="node:479" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/population-genetics-and-genomics" hreflang="en">Population Genetics and Genomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Jerome Goudet          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:457]" type="checkbox" value="node:457" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/proteome-informatics" hreflang="en">Proteome Informatics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Frederique Lisacek          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:507]" type="checkbox" value="node:507" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/proteome-informatics-fgcz" hreflang="en">Proteome Informatics FGCZ</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Christian Panse          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:434]" type="checkbox" value="node:434" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/rna-regulatory-networks" hreflang="en">RNA Regulatory Networks</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Mihaela Zavolan          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:435]" type="checkbox" value="node:435" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/scicore" hreflang="en">sciCORE</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Torsten Schwede          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:458]" type="checkbox" value="node:458" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/scientific-and-parallel-computing" hreflang="en">Scientific and Parallel Computing</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Bastien Chopard          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:487]" type="checkbox" value="node:487" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/scientific-computing" hreflang="en">Scientific Computing</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Igor Pivkin          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/72" hreflang="en">Lugano</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:436]" type="checkbox" value="node:436" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/scientific-it-services" hreflang="en">Scientific IT Services</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Bernd Rinn          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/1" hreflang="en">Basel</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:508]" type="checkbox" value="node:508" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/service-and-support-science-it" hreflang="en">Service and Support for Science IT</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Marcel Riedi          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:480]" type="checkbox" value="node:480" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/sib-management" hreflang="en">SIB Management</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Christophe Dessimoz          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:459]" type="checkbox" value="node:459" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/sib-text-mining" hreflang="en">SIB Text Mining</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Patrick Ruch          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:509]" type="checkbox" value="node:509" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/snijder-lab" hreflang="en">Snijder Lab</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Berend Snijder          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:450]" type="checkbox" value="node:450" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/statistical-and-computational-evolutionary-biology" hreflang="en">Statistical and Computational Evolutionary Biology</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Daniel Wegmann          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/30" hreflang="en">Fribourg</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:510]" type="checkbox" value="node:510" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/statistical-bioinformatics" hreflang="en">Statistical Bioinformatics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Mark Robinson          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:481]" type="checkbox" value="node:481" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/statistical-genetics" hreflang="en">Statistical Genetics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Zoltan Kutalik          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:460]" type="checkbox" value="node:460" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/swiss-prot" hreflang="en">Swiss-Prot</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Alan James Bridge          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/35" hreflang="en">Geneva</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:482]" type="checkbox" value="node:482" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/systems-and-population-genetics" hreflang="en">Systems and Population Genetics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Olivier Delaneau          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:442]" type="checkbox" value="node:442" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/theoretical-ecology-and-evolution" hreflang="en">Theoretical Ecology and Evolution</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Claudia Bank          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/19" hreflang="en">Bern</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:511]" type="checkbox" value="node:511" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/theoretical-oncogenomics" hreflang="en">Theoretical Oncogenomics</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Michael Baudis          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/86" hreflang="en">Zurich</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:483]" type="checkbox" value="node:483" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/training" hreflang="en">Training</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Patricia Palagi          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:486]" type="checkbox" value="node:486" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/translational-data-science" hreflang="en">Translational Data Science</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Raphael Gottardo          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+          <tr>
+                                                                                        <td class="views-field views-field-entity-browser-select"><div class="js-form-item form-item js-form-type-checkbox form-type--checkbox form-type--boolean js-form-item- form-item-- form-item--no-label">
+      <label class="form-item__label visually-hidden">Select this item</label>
+        <input name="entity_browser_select[node:484]" type="checkbox" value="node:484" class="form-checkbox form-boolean form-boolean--type-checkbox">
+        </div>
+          </td>
+                                                                                        <td headers="view-title-table-column--vSvPwrBNCug" class="views-field views-field-title is-active"><a href="/groups/vital-it" hreflang="en">Vital-IT</a>          </td>
+                                                                                        <td headers="view-field-group-leader-table-column--RuByMrFkE6g" class="views-field views-field-field-group-leader">Mark Ibberson          </td>
+                                                                                        <td headers="view-field-city-table-column--GZZhtwNJvVM" class="views-field views-field-field-city"><a href="/taxonomy/term/45" hreflang="en">Lausanne</a>          </td>
+              </tr>
+      </tbody>
+</table>
+
+    </div>
+
+          </div>
+<input type="hidden" value="-1"><input type="hidden" value="0">
+<input data-drupal-selector="edit-entity-browser-select-form-metadata-cardinality" type="hidden" name="entity_browser_select_form_metadata[cardinality]" value="-1"><input data-drupal-selector="edit-entity-browser-select-form-metadata-use-field-cardinality" type="hidden" name="entity_browser_select_form_metadata[use_field_cardinality]" value="0"><div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions--2"><input class="is-entity-browser-submit button button--primary js-form-submit form-submit" data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Select groups"></div>
+<input autocomplete="off" data-drupal-selector="form-dilbmftf42peh2jf2cvufighidpheofo8kpxkdzopoq" type="hidden" name="form_build_id" value="form-dilBMFtf42pEH2jf2CvUfigHidpHEOFo8kPxkdzopOQ"><input data-drupal-selector="edit-entity-browser-groups-form-form-token" type="hidden" name="form_token" value="VRtdezsA2Wd06YZW7ka7tDxr6FYmeNAdeEq4EDvl_l8"><input data-drupal-selector="edit-entity-browser-groups-form" type="hidden" name="form_id" value="entity_browser_groups_form">
+</form>
+
+  </div>
+
+  </div>
+
+
+        </div>
+    </main>
+
+</div>
+  </div>
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"entity-browser\/modal\/groups","currentPathIsAdmin":true,"isFront":false,"currentLanguage":"en","currentQuery":{"original_path":"\/node\/add\/article","uuid":"a635008d4c9a36d7b275b5010ce2616b888546ff"}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"big_pipe\/big_pipe,claro\/global-styling,contextual\/drupal.contextual-links,core\/drupal.active-link,core\/normalize,entity_browser\/entity_browser,entity_browser\/view,raven\/raven,sib_admin\/global,system\/admin,system\/base,views\/views.ajax,views\/views.module","theme":"sib_admin","theme_token":"vDxlNR1aq0U1hmOORV0U-yPbYb5ev7Dc02ps8EpBVs0"},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true,"\/entity-browser\/modal\/groups":true},"bigPipePlaceholderIds":{"callback=Drupal%5CCore%5CRender%5CElement%5CStatusMessages%3A%3ArenderMessages\u0026args%5B0%5D\u0026token=_HAdUpwWmet0TOTe2PSiJuMntExoshbm1kh2wQzzzAA":true},"raven":{"options":{"dsn":"https:\/\/f49cb736f3064452bd85cb9930c0cd3a@sentry-dev.vital-it.ch\/14","environment":"prod","release":"0.1","integrations":[],"tracesSampleRate":1,"autoSessionTracking":false,"sendClientReports":false},"showReportDialog":false},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:112b94ab579c6519628de89f40b86cb379dad3e67f1a94cfd6c5bdb48f0d5c74":{"view_name":"nodes_entity_browser","view_display_id":"entity_browser_2","view_args":"","view_path":"\/entity-browser\/modal\/groups","view_base_path":null,"view_dom_id":"112b94ab579c6519628de89f40b86cb379dad3e67f1a94cfd6c5bdb48f0d5c74","pager_element":0}}},"entity_browser_widget":{"auto_select":false},"user":{"uid":"10","permissionsHash":"689f2f89ff9784b3bd69c869d63b4cc541aa9017a90fe7e8a557de6f43537f88"}}</script>
+<script src="/sites/default/files/js/js_ywHH1kqhqoO-iuxWoxDBNl9e-vNbGJZVEW4JFxqJLR8.js?scope=footer&amp;delta=0&amp;language=en&amp;theme=sib_admin&amp;include=eJxdT9ESgyAM-yGUT_IKdF4dgmtBZV8_hno799KjSZoEGxm147yA7xeOI6OIsjEk3FMGf1E_pPMUnqIYVgxaMCQuneG4CfIJtqmkSMJZGxBU1gNHbYHdBYObKdScGh4iz-DpfclGH02NkVRq0qiEzNDUJ3EcnbXAJlqxVVK1CqUynF30fVUr4Sa6zX6OLns8jKj-i0O1ml4ZufSP2uYmhgn2f-8vowyNw0IL6uvxAcS_gTY"></script><div id="drupal-live-announce" class="visually-hidden" aria-live="polite" aria-busy="false"></div>
+
+<script type="application/vnd.drupal-ajax" data-big-pipe-event="start"></script>
+    <script type="application/vnd.drupal-ajax" data-big-pipe-replacement-for-placeholder-with-id="callback=Drupal%5CCore%5CRender%5CElement%5CStatusMessages%3A%3ArenderMessages&amp;args%5B0%5D&amp;token=_HAdUpwWmet0TOTe2PSiJuMntExoshbm1kh2wQzzzAA">
+    [{"command":"insert","method":"replaceWith","selector":"[data-big-pipe-placeholder-id=\u0022callback=Drupal%5CCore%5CRender%5CElement%5CStatusMessages%3A%3ArenderMessages\u0026args%5B0%5D\u0026token=_HAdUpwWmet0TOTe2PSiJuMntExoshbm1kh2wQzzzAA\u0022]","data":"","settings":null}]
+    </script>
+<script type="application/vnd.drupal-ajax" data-big-pipe-event="stop"></script>
+
+
+</body></html>
