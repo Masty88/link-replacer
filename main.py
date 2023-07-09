@@ -4,30 +4,46 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import re
 
-df = pd.DataFrame() # Inizializza il DataFrame
+df = pd.DataFrame()  # Inizializza il DataFrame
+
 
 def load_csv():
     global df
     filepath = filedialog.askopenfilename()
     df = pd.read_csv(filepath)
+    df = pd.read_csv(filepath)
+    df['Joomla Link'] = df['Joomla Link'].str.strip()
+    if filepath:
+        try:
+            df = pd.read_csv(filepath)
+            print("File loaded successfully")
+            print(f"Loaded file: {filepath}")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+
 
 def show_text():
     global df
+    if df.empty:
+        print("Il file CSV non è stato caricato.")
+        return
     original_html = text_area1.get('1.0', tk.END)
     soup = BeautifulSoup(original_html, 'html.parser')
     missing_links = []
     changed_links = []
     for a in soup.find_all('a', href=True):
         href = a['href']
-        if href.startswith('https://sib.swiss'):
-            link_parts = href.split('https://sib.swiss')
+        if href.startswith('https://www.sib.swiss'):
+            link_parts = href.split('https://www.sib.swiss')
             if len(link_parts) > 1:
-                joomla_link = link_parts[1]
-                if joomla_link in df['Joomla link'].values:
-                    new_link = 'https://sib.swiss' + df.loc[df['Joomla link'] == joomla_link, 'Drupal link'].values[0]
+                joomla_link = 'https://www.sib.swiss' + link_parts[1]  # Prendi il secondo elemento della lista
+                print(f"Looking for: {joomla_link}")  # Aggiungi questa riga
+                if joomla_link in df['Joomla Link'].values:
+                    new_link = df.loc[df['Joomla Link'] == joomla_link, 'Node'].values[0]
                     changed_links.append(f'{href} -> {new_link}')
                     a['href'] = new_link
                 else:
+                    missing_links.append(href)
                     missing_links.append(href)
     if missing_links:
         text_area2.insert('1.0', 'NOT FOUND:\n')
@@ -37,11 +53,13 @@ def show_text():
         text_area3.insert(tk.END, f'{link}\n')
     text_area3.insert(tk.END, str(soup))
 
+
 def close_window():
     root.destroy()
 
+
 root = tk.Tk()
-root.geometry('800x600')
+root.geometry('800x680')
 root.title("HTML Input")
 
 root.protocol("WM_DELETE_WINDOW", close_window)
@@ -57,8 +75,6 @@ label1.pack()
 # Create text area
 text_area1 = scrolledtext.ScrolledText(frame1, height=10)
 text_area1.pack(fill='x', expand=True)
-
-
 
 # Create frame for second editor
 frame2 = tk.Frame(root)
