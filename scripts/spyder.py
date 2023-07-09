@@ -1,6 +1,5 @@
 import scrapy
 
-
 class MySpider(scrapy.Spider):
     name = 'myspider'
     start_urls = ['https://www.sib.swiss/national-network/groups-and-group-leaders']
@@ -30,3 +29,4 @@ class MySpider(scrapy.Spider):
             'replaced_link': response.meta['replaced_link'],
             'description': description_text
         }
+
