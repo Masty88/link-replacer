@@ -1,48 +1,59 @@
 import asyncio
 from pyppeteer import launch
 
-# async def main():
-#     # Launch a new browser
-#     browser = await launch()
-#     page = await browser.newPage()
-#
-#     # # Go to the website that you want to copy from
-#     # await page.goto('http://www.example.com')
-#     #
-#     # # Find the element that contains the text you want to copy
-#     # element = await page.querySelector('#element_id')
-#     #
-#     # # Copy the text
-#     # text = await page.evaluate('(element) => element.textContent', element)
-#
-#     # Go to the Drupal website
-#     await page.goto('https://next.sib.swiss/user/login')
-#
-#     # Find the login form and enter your credentials
-#     await page.type('#edit-name', 'emastaglia')
-#     await page.type('#edit-pass', '!EC&6zrLdW%x*5')
-#
-#     # Submit the form
-#     await page.click('#edit-submit')
-#
-#     page_content = await page.content()
-#     print(page_content)
-#
-#     # Wait for the page to load
-#     await asyncio.sleep(5)  # adjust this value as needed
-#
-#     # Check if you're logged in
-#     logout_button = await page.querySelector('.toolbar-bar')  # replace with the actual selector
-#     if logout_button:
-#         print("Logged in successfully.")
-#     else:
-#         print("Failed to log in.")
-#
-#
-#     # Close the browser
-#     await browser.close()
-#
-# asyncio.get_event_loop().run_until_complete(main())
+import asyncio
+from pyppeteer import launch
+
+async def main():
+    # Launch a new browser
+    browser = await launch()
+    page = await browser.newPage()
+
+    # Go to the Drupal website
+    await page.goto('https://next.sib.swiss/user/login')
+
+    # Find the login form and enter your credentials
+    await page.type('#edit-name', '')
+    await page.type('#edit-pass', '')
+
+    # Submit the form
+    await page.click('#edit-submit')
+
+    # Wait for the page to load
+    await asyncio.sleep(5)  # adjust this value as needed
+
+    # Check if you're logged in
+    logout_button = await page.querySelector('.toolbar-bar')  # replace with the actual selector
+    if logout_button:
+        print("Logged in successfully.")
+        # If logged in, navigate to the specified URL
+        await page.goto('https://next.sib.swiss/groups/bioinformatics-proteogenomics')
+
+        # Find the 'Edit' link and click it
+        edit_link = await page.querySelector('a[data-drupal-link-system-path="node/493/edit"]')
+        await edit_link.click()
+
+        # Wait for the new page to load
+        await asyncio.sleep(5)  # adjust this value as needed
+
+        # Find the textbox, clear it, and type the new text
+        text_box = await page.querySelector('.ck-editor__editable_inline')
+        await page.evaluate('(element) => element.innerHTML = ""', text_box)
+        await page.type('.ck-editor__editable_inline', 'Hello from py')
+
+        # Click the 'Save' button
+        save_button = await page.querySelector('input[data-drupal-selector="edit-submit"]')
+        await save_button.click()
+
+        print("Edited and saved successfully.")
+    else:
+        print("Failed to log in.")
+
+    # Close the browser
+    await browser.close()
+
+asyncio.get_event_loop().run_until_complete(main())
+
 
 import scrapy
 
